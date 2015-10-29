@@ -5,8 +5,8 @@ using namespace std;
 
 class Stack {
 private:
-	queue<int> q1, q2;
-	int int_top;
+    queue<int> q1, q2;
+    int int_top;
 
 public:
     // Push element x onto stack.
@@ -21,13 +21,13 @@ public:
         queue<int> *qb = qa == &q2 ? &q1 : &q2;
 
 
-    	int tmp;
-    	while((*qa).size() > 1) {
-    		tmp = (*qa).front();
-    		(*qa).pop();
-    		(*qb).push(tmp);
+        int tmp;
+        while((*qa).size() > 1) {
+            tmp = (*qa).front();
+            (*qa).pop();
+            (*qb).push(tmp);
             this->int_top = tmp;
-    	}
+        }
 
         (*qa).pop();
     }
